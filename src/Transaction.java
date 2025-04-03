@@ -8,8 +8,7 @@ public class Transaction {
     private String date;
     private String paymentStatus;
 
-
-    public Transaction(String transactionId,String farmerID,double quantity,double price,String date,String paymentStatus){
+    public Transaction(String transactionId, String farmerID, double quantity, double price, String date, String paymentStatus) {
         this.transactionId = transactionId;
         this.farmerID = farmerID;
         this.quantity = quantity;
