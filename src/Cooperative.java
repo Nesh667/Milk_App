@@ -15,4 +15,38 @@ public class Cooperative {
         this.businessNumber = businessNumber;
         this.transactionReports = new ArrayList<>();
     }
+
+    // Getters
+    public String getCooperativeId() {
+        return cooperativeId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getBusinessNumber() {
+        return businessNumber;
+    }
+
+    public List<Transaction> getTransactionReports() {
+        return transactionReports;
+    }
+
+    // Setters
+    public void setCooperativeId(String cooperativeId) {
+        this.cooperativeId = cooperativeId;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setBusinessNumber(String businessNumber) {
+        this.businessNumber = businessNumber;
+    }
+
+    public void setTransactionReports(List<Transaction> transactionReports) {
+        this.transactionReports = transactionReports;
+    }
 }
