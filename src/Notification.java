@@ -7,8 +7,7 @@ public class Notification {
     private String farmerId;
     private String message;
     private String phoneNum;
-    private LocalDateTime timestamp;  
-    private String status;
+    private LocalDateTime timestamp;
 
     public Notification(String notificationId, String farmerId, String phoneNum, String message, LocalDateTime timestamp) {
         this.notificationId = notificationId;
@@ -16,22 +15,5 @@ public class Notification {
         this.phoneNum = phoneNum;
         this.message = message;
         this.timestamp = timestamp;
-        this.status = "PENDING";
     }
-
-    public void sendSMS() {
-        System.out.println("SMS to " + phoneNum + " at " + timestamp + ": " + message);
-        this.status = "SENT";
-    }
-
-    public void sendInApp() {  
-        System.out.println("In-app notification at " + timestamp + ": " + message);
-        this.status = "SENT";
-    }
-
-    public String getNotificationId() { return notificationId; }
-    public String getFarmerId() { return farmerId; }
-    public String getStatus() { return status; }
-    public String getPhoneNum() { return phoneNum; }  
-    public String getMessage() { return message; }  
 }

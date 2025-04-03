@@ -19,24 +19,7 @@ public class CollectionRequest {
         this.collectionPointId = collectionPointId;
     }
 
-    public void submit() {
-        System.out.println("Collection request " + requestId + " submitted for " + quantity + "L on " + requestDateTime);
+    public String getRequestId() {
+        return requestId;
     }
-
-    public void updateStatus(String newStatus) {
-        this.status = newStatus;
-        System.out.println("Request " + requestId + " status updated to: " + status);
-    }
-
-    public void notifyFarmer(String phoneNum) {
-        Notification notification = new Notification(
-            "N" + requestId, farmerId, phoneNum,
-            "Request " + requestId + " status: " + status, LocalDateTime.now()
-        );
-        notification.sendSMS();  // Could also use sendInApp()
-    }
-
-    public String getRequestId() { return requestId; }
-    public String getFarmerId() { return farmerId; }
-    public String getStatus() { return status; }
 }
