@@ -1,26 +1,26 @@
 package FarmerModule;
 
+import java.time.LocalDateTime;
+
 public class CollectionRequest {
     private String requestId;
     private String farmerId;
     private int quantity;
-    private String date;
-    private String time;           
+    private LocalDateTime requestDateTime;
     private String status;
-    private String collectionPointId;  
+    private String collectionPointId;
 
-    public CollectionRequest(String requestId, String farmerId, int quantity, String date, String time, String collectionPointId) {
+    public CollectionRequest(String requestId, String farmerId, int quantity, LocalDateTime requestDateTime, String collectionPointId) {
         this.requestId = requestId;
         this.farmerId = farmerId;
         this.quantity = quantity;
-        this.date = date;
-        this.time = time;
+        this.requestDateTime = requestDateTime;
         this.status = "PENDING";
         this.collectionPointId = collectionPointId;
     }
 
-    public void submit() {  
-        System.out.println("Collection request " + requestId + " submitted for " + quantity + "L on " + date + " " + time);
+    public void submit() {
+        System.out.println("Collection request " + requestId + " submitted for " + quantity + "L on " + requestDateTime);
     }
 
     public void updateStatus(String newStatus) {
@@ -28,10 +28,10 @@ public class CollectionRequest {
         System.out.println("Request " + requestId + " status updated to: " + status);
     }
 
-    public void notifyFarmer() {  
+    public void notifyFarmer(String phoneNum) {
         Notification notification = new Notification(
-            "N" + requestId, farmerId, "123-456-7890",  // Phone number hardcoded for demo
-            "Request " + requestId + " status: " + status, "2025-04-02 10:00"
+            "N" + requestId, farmerId, phoneNum,
+            "Request " + requestId + " status: " + status, LocalDateTime.now()
         );
         notification.sendSMS();  // Could also use sendInApp()
     }
