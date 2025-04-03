@@ -1,3 +1,5 @@
+package FarmerModule;
+
 class Loan {
     private String loanId;
     private String farmerId;
