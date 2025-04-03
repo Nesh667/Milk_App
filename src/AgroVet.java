@@ -12,4 +12,38 @@ public class AgroVet {
         this.cost = cost;
         this.description = description;
     }
+
+    // Getters
+    public String getServiceId() {
+        return serviceId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getCost() {
+        return cost;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    // Setters
+    public void setServiceId(String serviceId) {
+        this.serviceId = serviceId;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCost(double cost) {
+        this.cost = cost;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }

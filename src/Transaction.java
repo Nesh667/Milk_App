@@ -16,4 +16,26 @@ public class Transaction {
         this.date = date;
         this.paymentStatus = paymentStatus;
     }
-}
+
+    // Getters
+    public String getTransactionId() {
+        return transactionId;
+    }
+
+    public String getFarmerID() {
+        return farmerID;
+    }
+
+    public double getQuantity() {
+        return quantity;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public String get

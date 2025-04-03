@@ -20,6 +20,56 @@ public class Farmer {
         this.transactionHistory = new ArrayList<>();
     }
 
+    // Getters
+    public String getFarmerID() {
+        return farmerID;
+    }
+
+    public String getPhoneNum() {
+        return phoneNum;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double[] getGeoLocation() {
+        return geoLocation;
+    }
+
+    public int getCowCount() {
+        return cowCount;
+    }
+
+    public List<Transaction> getTransactionHistory() {
+        return transactionHistory;
+    }
+
+    // Setters
+    public void setFarmerID(String farmerID) {
+        this.farmerID = farmerID;
+    }
+
+    public void setPhoneNum(String phoneNum) {
+        this.phoneNum = phoneNum;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setGeoLocation(double[] geoLocation) {
+        this.geoLocation = geoLocation;
+    }
+
+    public void setCowCount(int cowCount) {
+        this.cowCount = cowCount;
+    }
+
+    public void setTransactionHistory(List<Transaction> transactionHistory) {
+        this.transactionHistory = transactionHistory;
+    }
+
     public void register() {
         System.out.println("Farmer " + name + " registered successfully.");
     }
