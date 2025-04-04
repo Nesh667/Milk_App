@@ -38,4 +38,3 @@ public class Transaction {
         return date;
     }
 
-    public String get
