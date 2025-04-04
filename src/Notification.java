@@ -9,4 +9,4 @@ public class Notification {
     private String phoneNum;
     private LocalDateTime timestamp;
 
-    public Notification(String notificationId, String farmerId
+}
